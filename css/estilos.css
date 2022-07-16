@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial,sans-serif;
+	font-size: 16px;
+	background: gray;
+}
+
+.contenedor{
+	width: 90%;
+	margin: 20px auto;
+	overflow: hidden;/*para colocar elementos en linea*/
+}
+
+header{
+	background: darkcyan;
+}
+
+header nav{
+	width: 100%;
+}
+
+header nav ul{
+	width: 100%;
+	overflow: hidden;
+	list-style: none;
+}
+
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 20px;
+	color: black;
+}
+
+header nav ul li a:hover{
+	background: gray;
+	color: darkred;
+}
+
+.main{
+	width: 70%;
+	background: #5E7D7E;
+	float: left;
+}
+
+.main .imagen img{
+	width: 100%;
+	vertical-align: top;
+}
+
+.main .ref{
+	padding: 40px;
+	color: darkblue;
+}
+
+.main .ref article h2{
+	margin-bottom: 15px;
+	line-height: 27px;
+	color: darkred;
+}
+
+aside{
+	width: 30%;
+	padding: 20px;
+	color: white;
+	background: black;
+	float: left;
+}
+
+aside .lateral{
+	margin-bottom: 20px;
+}
+
+aside .lateral .titulo{
+	color: #ff8000;
+	border-bottom: 1px solid #ff8000;
+	margin-bottom: 10px;
+}
+
+aside .lateral ul{
+	list-style: none;
+}
+
+aside .lateral ul li{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+aside .lateral ul li a{
+	color: darkcyan;
+	text-decoration: none;
+}
+
+aside .lateral ul li a:hover{
+	color: #8f8f8f;
+}
+
+aside .lateral p{
+	line-height: 27px;
+}
+
+footer{
+	width: 700px;
+	background: black;
+	color: #BCC6CC;
+	padding: 15px 0;
+	text-align: center;
+}
+
