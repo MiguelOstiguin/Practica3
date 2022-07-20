@@ -113,3 +113,18 @@ footer{
 	text-align: center;
 }
 
+/*Uso de mediaqueries*/
+@media screen and (max-width: 800px){
+	.main{
+		width: 100px;
+		font-size: 12px;
+		background: black;
+	}
+	aside{
+		width: 100%;
+	}
+	footer{
+		width: 100%;
+	}
+}
+
