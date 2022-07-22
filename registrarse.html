@@ -2,48 +2,103 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-sacale=1.0, minimum-sacale=1.0">
-	<title>Asus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>registrarse</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital.wght@1,100&family=Slabo+27px&display=swap" rel="stylesheet" >
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<style>
-		.main .post{
-			background-image: url("img/");
-			 background-position-x: center;
-			 background-position-y: center;
-			 background-repeat: no-repeat;
-			 background-size: 400px;
+		.caja{
+			background: #f2f2f2f2;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+			width: 80%;
+			margin: 40px;
 		}
-		form p{
-			text-align: center;
-			margin-bottom: 20px;
-			font-size: 30px;
-		}
-		input[type="text"]{
-			width: 20%;
-			margin-bottom: 20px;
+		.formulario .caja-inputs{
 			padding: 20px;
-			text-align: center;
+			background: gray;
+			border-radius: 6px 6px 0 0;
 		}
-		form .btn{
-			width: 15%;
-			background: #cf5c36;
-			color: #fff;
+		.formulario input[type="text"], .formulario input[type="correo"]{
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 15px 10px;	
 			border: none;
-			cursor: pointer;
-			font-size: 16px;
-			text-align: center;
-			padding: 20px;
-			display: inline-block;
-			text-decoration: none;
+			border-bottom: 5px solid #ccc;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
 		}
+		.formulario input[type="text"]:focus, .formulario input[type="correo"]focus{
+			border-bottom: 2px solid #246eb9;
+		}
+		.formulario input[type="radio"]{
+			display: none;
+		}
+		.formulario .sexo{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-bottom: 30px;
+		}
+		.formulario .sexo .hombre{
+			border-radius: 5px 0 0 5px;
+		}
+		.formulario .sexo .mujer{
+			border-radius: 0 5px 5px 0;
+		}
+		.formulario .label-radio{
+			background: rgba(29,55,70,.4);/*El .4 es una transparencia*/
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			width: 49%;
+		}
+
+		.formulario input[type="radio"]:checked + .label-radio{
+			background: #0E6655;
+		}
+		.formulario .terminos{
+			text-align: center;
+			color: darkblue;
+		}
+		.formulario .terminos label{
+			margin-left: 10px;
+
+		}
+		.formulario .error{
+			display: none;/*Se encarga de ocultar la secion de errores*/
+			margin-top: 20px;
+			border-radius: 3px;
+			background: #ce1818;
+			color: #fff;
+			padding: 15px 10px;
+			padding-left: 40px;
+		}
+		.formulario .btn{
+			width: 100%;
+			text-align: center;
+			background: black;
+			color: #fff;
+			border: 1px solid;
+			display: block;
+			padding: 15px 10px;
+			cursor: pointer;
+			border-radius: 0 0 6px 6px;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+		}
+		.formulario .btn:hover{
+			background: darkgray;
+			color: darkred;
+		}
+
+
 
 	</style>
 </head>
 <body>
 
-
-
-	<body>
 		<div class="contenedor">
 			<header>
 				<nav>
@@ -56,21 +111,32 @@
 				</nav>
 			</header>
 			<section class="main">
-				<div class="imagen">
-					<h2><i>Calculadora</i></h2>
-					<p>El siguiente formulario realiza las siguientes acciones de una calculadora</p>
-				</div>
-				<section class="post">
-					<article>
-						
-						<form action="">
+				
+				<div class="caja">
+					<form action="" class="formulario" id="formulario" name=formulario>
+						<div class="caja-inputs">
+							<input type="text" name="nombre" placeholder="Nombre">
+							<input type="text" name="correo" placeholder="Correo">
 							
+								<div class="sexo">
+									<input type="radio" name="sexo" id="hombre" value="Hombre">
+									<label class="label-radio hombre" for="hombre">Hombre</label>
 
-						</form>
+									<input type="radio" name="sexo" id="mujer" value="Mujer">
+									<label class="label-radio mujer" for="mujer">Mujer</label>
+							</div>
+							<div class="terminos">
+								<input type="checkbox" name="terminos" id="terminos">
+								<label for="terminos">Acepto los terminos y condiciones</label>
+								<ul class="error" id="error"></ul>
+							</div>
+							<input type="submit" class="btn" value="Registrarse">
+						</div>
 
-					</article>
-					
-				</section>
+					</form>
+
+
+				</div>				
 
 			</section>
 			<aside>
@@ -100,7 +166,7 @@
 			</footer>
 		</div>
 
-<script src="js/acciones.js"></script>
+<script src="js/acciones2.js"></script>
 
 	</body>
 </html>
